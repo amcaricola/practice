@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+
+}
+
+header{
+    display: block;
+    background-color: yellowgreen;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 997;
+}
+
+section {
+    text-align: center;
+    height: 700px;
+    width: 100%;
+    padding-top: 4rem;
+
+  
+    
+}
+
+#menu{
+    width: 55px;
+    height: 55px;
+    background-color: yellowgreen;
+    display:grid;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 15px;
+    font-weight: bold;
+
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 999;
+    cursor: pointer;
+
+}
+
+.menu_desplegado{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 90%);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 998;
+    transform: translate(-100%,0);
+    transition: transform 0.3s ease;
+    
+}
+
+.is-active {
+    transform: translate(0,0);
+}
+
+
+
+.menu_desplegado a{    
+    color: yellowgreen;
+    display: inline-block;
+    width: 70%;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid yellowgreen;
+    border-radius: 10px;
+    font-size: large;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+}
+
+.menu_desplegado a:hover{
+    color: black;
+    background-color: yellowgreen;
+
+}
+
+#cuadroTeclas {
+    margin: auto;
+    background-color: #222;
+    height: 500px;
+    width: 80vw;
+    position: relative;
+    border: 1px solid yellowgreen;
+
+
+}
+
+#circuloTeclas{
+    background-color: yellowgreen;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+
+
+}
+
+.toTop{
+    width: 55px;
+    height: 55px;
+    background-color: yellowgreen;
+    display:grid;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 15px;
+    font-weight: bold;
+
+    position: fixed;
+    right: 105px;
+    bottom: 15px;
+    z-index: 999;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+}
+
+.toTop img {
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-90deg);
+
+
+
+}
+
+.toTop-is-active{
+
+    visibility: visible;
+    opacity: 100;
+
+}
+
+.darkmode {
+    background-color: #222;
+    color: azure;
+}
+
+#darkmode{
+    width: 55px;
+    height: 55px;
+    background-color: yellowgreen;
+    display:grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px;
+    font-weight: bold;
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+
+
+}
+
+#darkmode img {
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    visibility: visible;
+    display: visible;
+
+
+}
+
+
+.hidden {
+    display: none;
+    visibility: hidden;
+
+}
+
+.onlineCheck{
+    height: 55px;
+    width: 55px;
+    background-color: green;
+    position: fixed;
+    z-index: 998;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    
+
+}
