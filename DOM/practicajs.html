@@ -9,12 +9,14 @@
     
 </head>
 <body>
+    
+    
+
     <header id="top">
         <h1>Ejercicios del DOM</h1>
     </header>
-
     <article>
-        <section id="section1">
+        <section id="section1" data-scroll-spy>
             <h2>Relog digital y Alarma sonora!</h2>
             <div id="relogDigital"></div>
                 <audio id="audioControler"></audio>
@@ -26,7 +28,7 @@
             </div>
         </section>
     
-        <section id="section2">
+        <section id="section2" data-scroll-spy>
             <h2>Ejercicios con teclado</h2>
             <p>prueba de atajos: Alt + A / Alt + C / Alt + P</p>
             <div id="cuadroTeclas">
@@ -34,7 +36,7 @@
             </div>
         </section>
     
-        <section id="section3">
+        <section id="section3" data-scroll-spy>
             <h2>Countdown</h2>
             <p>
                 tiempo restante para año nuevo!
@@ -42,13 +44,13 @@
             <h4 id="countdown"></h4>
         </section>
     
-        <section id="section4">
+        <section id="section4" data-scroll-spy>
             <h2>Responsible responsive design</h2>
             <div id="rrd">
             </div>
         </section>
     
-        <section id="section5">
+        <section id="section5" data-scroll-spy>
             <h2>Responsive Tester</h2>
             <form id="respondive-tester">
                 <input type="url" name="direccion" placeholder="URL" required>
@@ -62,64 +64,90 @@
             </form>
         </section>
 
-        <section id="section6">
+        <section id="section6" data-scroll-spy>
             <h2>Deteccion de Dispositivos</h2>
             <div id="dispositivos"></div>
         </section>
 
-        <section id="section7">
+        <section id="section7" data-scroll-spy>
             <h2>Escoge Random</h2>
             <div id="random"></div>
             <button id="escoger-random">seleccionar 1 aleatoreamente!</button>
         </section>
 
-        <section id="section8">
-            <h2>section 8</h2>
+        <section id="section8" data-scroll-spy>
+            <h2>Video Inteligente</h2>
+            <video src="./assets/drakengar.mp4" muted controls data-smart-video></video>
+
+
         </section>
 
-        <section id="section9">
-            <h2>section 9</h2>
+        <section id="section9" data-scroll-spy> 
+            <h2>Validacion de Formulario</h2>
+
+            <form class="contact-form">
+                <legend class="contact-form-lengend">Envianos tus Comentarios</legend>
+
+                <input type="text" name="name" placeholder="Escribe tu nombre" title="El nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                
+                <input type="email" name="email" placeholder="Escribe tu correo Electronico" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                
+                <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" required>
+
+                <textarea name="comments" cols="50" rows="5" placeholder="Escribe tus comentarios" data-pattern="^.{1,255}$" title="Tu comentario no puede exceder los 255 caracteres" required></textarea>
+
+                <input type="submit">
+
+                <div class="conctact-form-loader none">
+                    <img src="./assets/loader.gif" alt="cargando">
+                </div>
+
+                <div class="contact-form-response none">
+                    <p>Los datos han sido enviados!</p>
+                </div>
+
+            </form>
         </section>
 
-        <section id="section10">
+        <section id="section10" data-scroll-spy>
             <h2>section 10</h2>
         </section>
 
-
+        
     </article>
+    <div class="menu_desplegado">
+        <a href="#section1" data-scroll-spy>Relog digital y Alarma sonora!</a>
+        <a href="#section2" data-scroll-spy>Ejercicios con teclado</a>
+        <a href="#section3" data-scroll-spy>Countdown</a>
+        <a href="#section4" data-scroll-spy>Responsible responsive design</a>
+        <a href="#section5" data-scroll-spy>Responsive Tester</a>
+        <a href="#section6" data-scroll-spy>Deteccion de Dispositivos</a>
+        <a href="#section7" data-scroll-spy>Escoge Random</a>
+        <a href="#section8" data-scroll-spy>Video Inteligente</a>
+        <a href="#section9" data-scroll-spy>Validacion de Formulario</a>
+        <a href="#section10" data-scroll-spy>section 10</a>
+        
+    </div>
 
-
+        
     <div id="menu">
         <p>Menu</p>
-    </div>
+    </div>      
 
     <div class="toTop">
         <img src="./assets/arrow.png" alt="toTop">
     </div>
-
+    
     <div id="darkmode">
         <img id="moon"  src="./assets/moon.png" alt="toTop">
         <img id="sun" class="hidden" src="./assets/sun.png" alt="toTop">
     </div>
 
-    <div class="menu_desplegado">
-        <a href="#section1">Relog digital y Alarma sonora!</a>
-        <a href="#section2">Ejercicios con teclado</a>
-        <a href="#section3">Countdown</a>
-        <a href="#section4">Responsible responsive design</a>
-        <a href="#section5">Responsive Tester</a>
-        <a href="#section6">Deteccion de Dispositivos</a>
-        <a href="#section7">Escoge Random</a>
-        <a href="#section8">section 8</a>
-        <a href="#section9">section 9</a>
-        <a href="#section10">section 10</a>
-
-    </div>
-
+    
     <div class="onlineCheck"></div>
 
-
-
+    
+    
     <script type="module" src="./practicajs.js"></script>
 </body>
 </html>

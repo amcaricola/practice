@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -19,6 +20,8 @@ header{
     text-align: center;
     position: sticky;
     top: 0;
+    height: 10vh;
+    width: 100%;
     z-index: 997;
 }
 
@@ -87,7 +90,7 @@ section {
 
 }
 
-.menu_desplegado a:hover{
+.menu_desplegado a:hover, .menu_desplegado a.active {
     color: black;
     background-color: yellowgreen;
 
@@ -97,7 +100,7 @@ section {
     margin: auto;
     background-color: #222;
     height: 500px;
-    width: 80vw;
+    width: 80%;
     position: relative;
     border: 1px solid yellowgreen;
 
@@ -210,4 +213,142 @@ section {
     justify-content: center;
     
 
+
+}
+
+video {
+    width: 80%;
+    height: auto;
+}
+
+/* SCROLL SPY */
+
+@media screen and (min-width: 1024px) {
+
+    
+    body {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header"
+        "main  panel";
+    }
+    
+    header{
+        grid-area: header;
+    }
+
+    article{
+        grid-area: main;
+    }
+
+    .menu_desplegado{
+        grid-area: panel;
+        position: sticky;
+        top: 10vh;
+        width: auto;
+        height: 90vh;
+        transform: translate(0,0);
+        
+    }
+
+    .menu_desplegado a {
+        font-size: medium;
+    }
+    
+    #menu{
+        display: none;
+    }
+
+    .toTop {
+        right:22% ;
+    }
+ 
+    
+}
+
+/* formuladio de contacto */
+
+.contact-form{
+    --form-ok-color: green;
+    --form-error-color: red; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    
+}
+
+.contact-form > * {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea{
+    resize: none;
+}
+
+.contact-form-lengend,
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+input, textarea {
+ font-size: 1rem;
+ font-family: sans-serif;   
+}
+
+.contact-form input[type="submit"]{
+    width: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form *::placeholder{
+    color: #000;
+}
+
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color)
+}
+
+
+.contact-form [required]:invalid{
+    border: thin solid var(--form-error-color)
+}
+
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error .is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
+
+@keyframes show-message {
+
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+    
 }
